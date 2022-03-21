@@ -1,0 +1,24 @@
+get http://localhost:4000/serverData HTTP/1.1
+authorization: Bear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiV2lsbG8iLCJpYXQiOjE2NDY5NDYxMjAsImV4cCI6MTY0Njk0NzMyMH0.HyfFTK2Gcw2Kh_yBL2KTemwNEsWwtmmNPAGu6hWj6s8
+
+###
+post http://localhost:6000/login HTTP/1.1
+Content-Type: application/json
+
+{
+	"username": "Willo"
+}
+###
+post http://localhost:6000/token HTTP/1.1
+Content-Type: application/json
+
+{
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiV2lsbG8iLCJpYXQiOjE2NDY5NDcyNDUsImV4cCI6MTY0Njk0ODQ0NX0.V0TJd3Q1-GVZujgM0RF6vgpvtpnviM9ny7SAom8WHog"
+}
+###
+DELETE http://localhost:6000/logout HTTP/1.1
+Content-Type: application/json
+
+{
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiV2lsbG8iLCJpYXQiOjE2NDY5NDcyNDUsImV4cCI6MTY0Njk0ODQ0NX0.V0TJd3Q1-GVZujgM0RF6vgpvtpnviM9ny7SAom8WHog"
+}
